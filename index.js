@@ -75,12 +75,14 @@ String.prototype.removeExtraSpaces = function() {
 String.prototype.kabobCase = function() {
   const cleanString = this.removeExtraSpaces()
   const words = cleanString.split(" ")
-  return words.join("-")
+  return words.join("-").toLowerCase()
 }
 
 // removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase
 String.prototype.snakeCase = function() {
-
+  const cleanString = this.removeExtraSpaces()
+  const words = cleanString.split(" ")
+  return words.join("_").toLowerCase()
 }
 
 // lowercases the first character of the first word
