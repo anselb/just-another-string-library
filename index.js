@@ -27,7 +27,17 @@ String.prototype.capitalizeWords = function() {
 
 // makes all odd characters uppercase and even characters lowercase
 String.prototype.oddCaps = function() {
+  const characters = this.split("")
 
+  for (let i = 0; i < characters.length; i += 1) {
+    if (i % 2 == 1) {
+      characters[i] = characters[i].toUpperCase()
+    } else {
+      characters[i] = characters[i].toLowerCase()
+    }
+  }
+
+  return characters.join("")
 }
 
 // makes all even characters uppercase and odd characters lowercase
