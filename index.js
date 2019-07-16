@@ -16,7 +16,13 @@ String.prototype.allCaps = function() {
 // makes the first character of each word uppercase
 // imagine that each word is separated by a space
 String.prototype.capitalizeWords = function() {
+  const words = this.split(" ")
 
+  for (let i = 0; i < words.length; i += 1) {
+    words[i] = words[i].capitalize()
+  }
+
+  return words.join(" ")
 }
 
 // makes all odd characters uppercase and even characters lowercase
