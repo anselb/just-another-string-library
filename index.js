@@ -88,5 +88,12 @@ String.prototype.snakeCase = function() {
 // lowercases the first character of the first word
 // then uppercases the first character of all other words, and removes all spaces
 String.prototype.camelCase = function() {
+  const cleanString = this.removeExtraSpaces().toLowerCase()
+  const words = cleanString.split(" ")
 
+  for (let i = 1; i < words.length; i += 1) {
+    words[i] = words[i].capitalize()
+  }
+
+  return words.join("")
 }
