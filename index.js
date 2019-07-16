@@ -73,7 +73,9 @@ String.prototype.removeExtraSpaces = function() {
 
 // removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase
 String.prototype.kabobCase = function() {
-
+  const cleanString = this.removeExtraSpaces()
+  const words = cleanString.split(" ")
+  return words.join("-")
 }
 
 // removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase
