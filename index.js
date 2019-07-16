@@ -42,7 +42,17 @@ String.prototype.oddCaps = function() {
 
 // makes all even characters uppercase and odd characters lowercase
 String.prototype.evenCaps = function() {
+  const characters = this.split("")
 
+  for (let i = 0; i < characters.length; i += 1) {
+    if (i % 2 == 0) {
+      characters[i] = characters[i].toUpperCase()
+    } else {
+      characters[i] = characters[i].toLowerCase()
+    }
+  }
+
+  return characters.join("")
 }
 
 // removes all spaces from the beginning and end of a String along with any extra spaces in the middle
