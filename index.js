@@ -22,6 +22,11 @@ String.prototype.oddCaps = function() {
 
 }
 
+// makes all even characters uppercase and odd characters lowercase
+String.prototype.evenCaps = function() {
+
+}
+
 // removes all spaces from the beginning and end of a String along with any extra spaces in the middle
 // if more than one space appears in the middle of a string it is replaced by a single space
 String.prototype.removeExtraSpaces = function() {
