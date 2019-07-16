@@ -10,7 +10,7 @@ String.prototype.capitalize = function() {
 // makes all characters uppercase
 // this is the same as .toUppercase()
 String.prototype.allCaps = function() {
-
+ return this.toUpperCase()
 }
 
 // makes the first character of each word uppercase
