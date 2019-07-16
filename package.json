@@ -4,7 +4,7 @@
   "description": "A simple string library that extends the string prototype",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/anselb/just-another-string-library/issues"
   },
-  "homepage": "https://github.com/anselb/just-another-string-library#readme"
+  "homepage": "https://github.com/anselb/just-another-string-library#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
