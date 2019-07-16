@@ -2,7 +2,9 @@
 
 // makes the first character of a given string uppercase
 String.prototype.capitalize = function() {
-
+  // Code taken from dr.dimitru in this Stack Overflow comment:
+  // https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript#comment56095910_1026087
+  return this[0].toUpperCase() + this.substring(1)
 }
 
 // makes all characters uppercase
