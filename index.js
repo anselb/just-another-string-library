@@ -58,7 +58,17 @@ String.prototype.evenCaps = function() {
 // removes all spaces from the beginning and end of a String along with any extra spaces in the middle
 // if more than one space appears in the middle of a string it is replaced by a single space
 String.prototype.removeExtraSpaces = function() {
+  const trimString = this.trim()
+  const items = trimString.split(" ")
+  let words = []
 
+  for (let i = 0; i < items.length; i += 1) {
+    if (items[i] !== "") {
+      words.push(items[i])
+    }
+  }
+
+  return words.join(" ")
 }
 
 // removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase
