@@ -4,7 +4,8 @@
   "description": "A simple string library that extends the string prototype",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/anselb/just-another-string-library#readme",
   "devDependencies": {
+    "coveralls": "^3.0.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-airbnb-base": "^13.2.0",
