@@ -19,3 +19,11 @@ test('Test allCaps', () => {
   expect('áéíóú'.allCaps()).toBe('ÁÉÍÓÚ');
   expect('49302'.allCaps()).toBe('49302');
 });
+
+test('Test capitalizeWords', () => {
+  expect('hello world'.capitalizeWords()).toBe('Hello World');
+  expect(''.capitalizeWords()).toBe('');
+  expect('1hello world'.capitalizeWords()).toBe('1hello World');
+  expect('áé í óú'.capitalizeWords()).toBe('Áé Í Óú');
+  expect('49302'.capitalizeWords()).toBe('49302');
+});
