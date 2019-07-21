@@ -1,4 +1,6 @@
 # Just Another String Library
+![npm bundle size](https://img.shields.io/bundlephobia/min/just-another-string-library.svg)
+![npm](https://img.shields.io/npm/v/just-another-string-library.svg)
 [![Build Status](https://travis-ci.com/anselb/just-another-string-library.svg?branch=master)](https://travis-ci.com/anselb/just-another-string-library)
 [![Coverage Status](https://coveralls.io/repos/github/anselb/just-another-string-library/badge.svg?branch=master)](https://coveralls.io/github/anselb/just-another-string-library?branch=master)
 
