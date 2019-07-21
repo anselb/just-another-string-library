@@ -43,3 +43,11 @@ test('Test evenCaps', () => {
   expect('áé í óú'.evenCaps()).toBe('Áé í óÚ');
   expect('49302'.evenCaps()).toBe('49302');
 });
+
+test('Test removeExtraSpaces', () => {
+  expect('     hello      world   '.removeExtraSpaces()).toBe('hello world');
+  expect(''.removeExtraSpaces()).toBe('');
+  expect('  1hello              world  '.removeExtraSpaces()).toBe('1hello world');
+  expect('áé    í óú  '.removeExtraSpaces()).toBe('áé í óú');
+  expect('  493 02    '.removeExtraSpaces()).toBe('493 02');
+});
