@@ -27,3 +27,11 @@ test('Test capitalizeWords', () => {
   expect('áé í óú'.capitalizeWords()).toBe('Áé Í Óú');
   expect('49302'.capitalizeWords()).toBe('49302');
 });
+
+test('Test oddCaps', () => {
+  expect('hello world'.oddCaps()).toBe('hElLo wOrLd');
+  expect(''.oddCaps()).toBe('');
+  expect('1hello world'.oddCaps()).toBe('1HeLlO WoRlD');
+  expect('áé í óú'.oddCaps()).toBe('áÉ Í Óú');
+  expect('49302'.oddCaps()).toBe('49302');
+});
