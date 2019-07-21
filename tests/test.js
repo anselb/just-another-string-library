@@ -67,3 +67,12 @@ test('Test snakeCase', () => {
   expect('áé    í ÓÚ  '.snakeCase()).toBe('áé_í_óú');
   expect('  493 02    '.snakeCase()).toBe('493_02');
 });
+
+
+test('Test camelCase', () => {
+  expect('     HellO      WoRLd   '.camelCase()).toBe('helloWorld');
+  expect(''.camelCase()).toBe('');
+  expect('  1HELLO              world  '.camelCase()).toBe('1helloWorld');
+  expect('áé    í ÓÚ  '.camelCase()).toBe('áéÍÓú');
+  expect('  493 02    '.camelCase()).toBe('49302');
+});
