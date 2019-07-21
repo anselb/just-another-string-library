@@ -51,3 +51,11 @@ test('Test removeExtraSpaces', () => {
   expect('áé    í óú  '.removeExtraSpaces()).toBe('áé í óú');
   expect('  493 02    '.removeExtraSpaces()).toBe('493 02');
 });
+
+test('Test kabobCase', () => {
+  expect('     HellO      WoRLd   '.kabobCase()).toBe('hello-world');
+  expect(''.kabobCase()).toBe('');
+  expect('  1HELLO              world  '.kabobCase()).toBe('1hello-world');
+  expect('áé    í ÓÚ  '.kabobCase()).toBe('áé-í-óú');
+  expect('  493 02    '.kabobCase()).toBe('493-02');
+});
