@@ -11,3 +11,11 @@ test('Test capitalize', () => {
   expect('áéíóú'.capitalize()).toBe('Áéíóú');
   expect('49302'.capitalize()).toBe('49302');
 });
+
+test('Test allCaps', () => {
+  expect('hello world'.allCaps()).toBe('HELLO WORLD');
+  expect(''.allCaps()).toBe('');
+  expect('1hello world'.allCaps()).toBe('1HELLO WORLD');
+  expect('áéíóú'.allCaps()).toBe('ÁÉÍÓÚ');
+  expect('49302'.allCaps()).toBe('49302');
+});
