@@ -35,3 +35,11 @@ test('Test oddCaps', () => {
   expect('áé í óú'.oddCaps()).toBe('áÉ Í Óú');
   expect('49302'.oddCaps()).toBe('49302');
 });
+
+test('Test evenCaps', () => {
+  expect('hello world'.evenCaps()).toBe('HeLlO WoRlD');
+  expect(''.evenCaps()).toBe('');
+  expect('1hello world'.evenCaps()).toBe('1hElLo wOrLd');
+  expect('áé í óú'.evenCaps()).toBe('Áé í óÚ');
+  expect('49302'.evenCaps()).toBe('49302');
+});
