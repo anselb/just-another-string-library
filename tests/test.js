@@ -59,3 +59,11 @@ test('Test kabobCase', () => {
   expect('áé    í ÓÚ  '.kabobCase()).toBe('áé-í-óú');
   expect('  493 02    '.kabobCase()).toBe('493-02');
 });
+
+test('Test snakeCase', () => {
+  expect('     HellO      WoRLd   '.snakeCase()).toBe('hello_world');
+  expect(''.snakeCase()).toBe('');
+  expect('  1HELLO              world  '.snakeCase()).toBe('1hello_world');
+  expect('áé    í ÓÚ  '.snakeCase()).toBe('áé_í_óú');
+  expect('  493 02    '.snakeCase()).toBe('493_02');
+});
