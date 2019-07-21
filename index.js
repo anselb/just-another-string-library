@@ -4,6 +4,7 @@
 String.prototype.capitalize = function capitalize() {
   // Code taken from dr.dimitru in this Stack Overflow comment:
   // https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript#comment56095910_1026087
+  if (this.length === 0) return ''
   return this[0].toUpperCase() + this.substring(1);
 };
 

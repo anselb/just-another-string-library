@@ -6,4 +6,6 @@ test('Sanity check', () => {
 
 test('Test capitalize', () => {
   expect('hello world'.capitalize()).toBe('Hello world');
+  expect(''.capitalize()).toBe('');
+  expect('1hello world'.capitalize()).toBe('1hello world');
 });
