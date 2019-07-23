@@ -1,22 +1,22 @@
 // Comments borrowed from Mitchell Hudson, @soggybag
 
 // makes the first character of a given string uppercase
-export function capitalize() {
+String.prototype.capitalize = function capitalize() {
   // Code taken from dr.dimitru in this Stack Overflow comment:
   // https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript#comment56095910_1026087
   if (this.length === 0) return '';
   return this[0].toUpperCase() + this.substring(1);
-}
+};
 
 // makes all characters uppercase
 // this is the same as .toUppercase()
-export function allCaps() {
+String.prototype.allCaps = function allCaps() {
   return this.toUpperCase();
-}
+};
 
 // makes the first character of each word uppercase
 // imagine that each word is separated by a space
-export function capitalizeWords() {
+String.prototype.capitalizeWords = function capitalizeWords() {
   const words = this.split(' ');
 
   for (let i = 0; i < words.length; i += 1) {
@@ -24,10 +24,10 @@ export function capitalizeWords() {
   }
 
   return words.join(' ');
-}
+};
 
 // makes all odd characters uppercase and even characters lowercase
-export function oddCaps() {
+String.prototype.oddCaps = function oddCaps() {
   const characters = this.split('');
 
   for (let i = 0; i < characters.length; i += 1) {
@@ -39,10 +39,10 @@ export function oddCaps() {
   }
 
   return characters.join('');
-}
+};
 
 // makes all even characters uppercase and odd characters lowercase
-export function evenCaps() {
+String.prototype.evenCaps = function evenCaps() {
   const characters = this.split('');
 
   for (let i = 0; i < characters.length; i += 1) {
@@ -54,12 +54,12 @@ export function evenCaps() {
   }
 
   return characters.join('');
-}
+};
 
 // trims all spaces from the beginning and end of a String
 // removes any extra spaces in the middle
 // if more than one space appears in the middle of a string it is replaced by a single space
-export function removeExtraSpaces() {
+String.prototype.removeExtraSpaces = function removeExtraSpaces() {
   const trimString = this.trim();
   const items = trimString.split(' ');
   const words = [];
@@ -71,27 +71,27 @@ export function removeExtraSpaces() {
   }
 
   return words.join(' ');
-}
+};
 
 // removes extra spaces and replaces spaces with the hyphen '-'
 // and makes all characters lowercase
-export function kabobCase() {
+String.prototype.kabobCase = function kabobCase() {
   const cleanString = this.removeExtraSpaces();
   const words = cleanString.split(' ');
   return words.join('-').toLowerCase();
-}
+};
 
 // removes extra space and replaces spaces with an underscore '_'
 // and makes all characters lowercase
-export function snakeCase() {
+String.prototype.snakeCase = function snakeCase() {
   const cleanString = this.removeExtraSpaces();
   const words = cleanString.split(' ');
   return words.join('_').toLowerCase();
-}
+};
 
 // lowercases the first character of the first word
 // then uppercases the first character of all other words, and removes all spaces
-export function camelCase() {
+String.prototype.camelCase = function camelCase() {
   const cleanString = this.removeExtraSpaces().toLowerCase();
   const words = cleanString.split(' ');
 
@@ -100,4 +100,4 @@ export function camelCase() {
   }
 
   return words.join('');
-}
+};
