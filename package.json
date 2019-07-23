@@ -1,6 +1,6 @@
 {
   "name": "just-another-string-library",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple string library that extends the string prototype",
   "main": "index.js",
   "scripts": {
