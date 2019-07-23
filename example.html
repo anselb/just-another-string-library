@@ -2,15 +2,24 @@
 
 </div>
 
-<script src="./umd/just-another-string-library.js"></script>
+<!-- <script src="./umd/just-another-string-library.js"></script> -->
+<script src="./umd/just-another-string-library-prototype.js"></script>
 <script>
   testDiv = document.getElementById("test")
 
   let capitalize = document.createElement("p")
-  capitalize.innerHTML = "Test capitalize(): " + "test".capitalize()
+  capitalize.innerHTML = "Test string prototype capitalize(): " + "test".capitalize()
   testDiv.appendChild(capitalize)
 
   let allCaps = document.createElement("p")
-  allCaps.innerHTML = "Test allCaps(): " + "test".allCaps()
+  allCaps.innerHTML = "Test string prototype allCaps(): " + "test".allCaps()
   testDiv.appendChild(allCaps)
+
+  // let capitalize = document.createElement("p")
+  // capitalize.innerHTML = "Test capitalize(): " + justAnotherStringLibrary.capitalize("test")
+  // testDiv.appendChild(capitalize)
+  //
+  // let allCaps = document.createElement("p")
+  // allCaps.innerHTML = "Test allCaps(): " + justAnotherStringLibrary.allCaps("test")
+  // testDiv.appendChild(allCaps)
 </script>

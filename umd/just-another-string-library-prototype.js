@@ -1,40 +1,39 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = global || self, factory(global.justAnotherStringLibrary = {}));
-}(this, function (exports) { 'use strict';
+(function (factory) {
+  typeof define === 'function' && define.amd ? define(factory) :
+  factory();
+}(function () { 'use strict';
 
   // Comments borrowed from Mitchell Hudson, @soggybag
 
   // makes the first character of a given string uppercase
-  function capitalize(str) {
+  String.prototype.capitalize = function capitalize() {
     // Code taken from dr.dimitru in this Stack Overflow comment:
     // https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript#comment56095910_1026087
-    if (str.length === 0) return '';
-    return str[0].toUpperCase() + str.substring(1);
-  }
+    if (this.length === 0) return '';
+    return this[0].toUpperCase() + this.substring(1);
+  };
 
   // makes all characters uppercase
   // this is the same as .toUppercase()
-  function allCaps(str) {
-    return str.toUpperCase();
-  }
+  String.prototype.allCaps = function allCaps() {
+    return this.toUpperCase();
+  };
 
   // makes the first character of each word uppercase
   // imagine that each word is separated by a space
-  function capitalizeWords(str) {
-    const words = str.split(' ');
+  String.prototype.capitalizeWords = function capitalizeWords() {
+    const words = this.split(' ');
 
     for (let i = 0; i < words.length; i += 1) {
-      words[i] = capitalize(words[i]);
+      words[i] = words[i].capitalize();
     }
 
     return words.join(' ');
-  }
+  };
 
   // makes all odd characters uppercase and even characters lowercase
-  function oddCaps(str) {
-    const characters = str.split('');
+  String.prototype.oddCaps = function oddCaps() {
+    const characters = this.split('');
 
     for (let i = 0; i < characters.length; i += 1) {
       if (i % 2 === 1) {
@@ -45,11 +44,11 @@
     }
 
     return characters.join('');
-  }
+  };
 
   // makes all even characters uppercase and odd characters lowercase
-  function evenCaps(str) {
-    const characters = str.split('');
+  String.prototype.evenCaps = function evenCaps() {
+    const characters = this.split('');
 
     for (let i = 0; i < characters.length; i += 1) {
       if (i % 2 === 0) {
@@ -60,13 +59,13 @@
     }
 
     return characters.join('');
-  }
+  };
 
   // trims all spaces from the beginning and end of a String
   // removes any extra spaces in the middle
   // if more than one space appears in the middle of a string it is replaced by a single space
-  function removeExtraSpaces(str) {
-    const trimString = str.trim();
+  String.prototype.removeExtraSpaces = function removeExtraSpaces() {
+    const trimString = this.trim();
     const items = trimString.split(' ');
     const words = [];
 
@@ -77,47 +76,35 @@
     }
 
     return words.join(' ');
-  }
+  };
 
   // removes extra spaces and replaces spaces with the hyphen '-'
   // and makes all characters lowercase
-  function kabobCase(str) {
-    const cleanString = removeExtraSpaces(str);
+  String.prototype.kabobCase = function kabobCase() {
+    const cleanString = this.removeExtraSpaces();
     const words = cleanString.split(' ');
     return words.join('-').toLowerCase();
-  }
+  };
 
   // removes extra space and replaces spaces with an underscore '_'
   // and makes all characters lowercase
-  function snakeCase(str) {
-    const cleanString = removeExtraSpaces(str);
+  String.prototype.snakeCase = function snakeCase() {
+    const cleanString = this.removeExtraSpaces();
     const words = cleanString.split(' ');
     return words.join('_').toLowerCase();
-  }
+  };
 
   // lowercases the first character of the first word
   // then uppercases the first character of all other words, and removes all spaces
-  function camelCase(str) {
-    const cleanString = removeExtraSpaces(str).toLowerCase();
+  String.prototype.camelCase = function camelCase() {
+    const cleanString = this.removeExtraSpaces().toLowerCase();
     const words = cleanString.split(' ');
 
     for (let i = 1; i < words.length; i += 1) {
-      words[i] = capitalize(words[i]);
+      words[i] = words[i].capitalize();
     }
 
     return words.join('');
-  }
-
-  exports.allCaps = allCaps;
-  exports.camelCase = camelCase;
-  exports.capitalize = capitalize;
-  exports.capitalizeWords = capitalizeWords;
-  exports.evenCaps = evenCaps;
-  exports.kabobCase = kabobCase;
-  exports.oddCaps = oddCaps;
-  exports.removeExtraSpaces = removeExtraSpaces;
-  exports.snakeCase = snakeCase;
-
-  Object.defineProperty(exports, '__esModule', { value: true });
+  };
 
 }));
