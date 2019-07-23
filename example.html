@@ -1,0 +1,16 @@
+<div id="test">
+
+</div>
+
+<script src="./umd/just-another-string-library.js"></script>
+<script>
+  testDiv = document.getElementById("test")
+
+  let capitalize = document.createElement("p")
+  capitalize.innerHTML = "Test capitalize(): " + "test".capitalize()
+  testDiv.appendChild(capitalize)
+
+  let allCaps = document.createElement("p")
+  allCaps.innerHTML = "Test allCaps(): " + "test".allCaps()
+  testDiv.appendChild(allCaps)
+</script>
