@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/anselb/just-another-string-library#readme",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
     "coveralls": "^3.0.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
